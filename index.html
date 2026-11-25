@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMIRAL TEXAS BOT | الدخول إلى البوت الرسمي</title>
+    <style>
+        :root {
+            --bg-dark: #090909;
+            --card-dark: #141414;
+            --card-top: #1c1510;
+            --orange-main: #ff5500;
+            --orange-light: #ff7733;
+            --orange-deep: #d94300;
+            --text-white: #ffffff;
+            --text-muted: #b5b5b5;
+            --text-dim: #7c7c7c;
+            --border-subtle: rgba(255, 85, 0, 0.26);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, "Segoe UI", Tahoma, Arial, sans-serif;
+        }
+
+        body {
+            background:
+                radial-gradient(circle at 50% 8%, rgba(255, 85, 0, 0.18) 0%, rgba(9, 9, 9, 1) 60%),
+                var(--bg-dark);
+            color: var(--text-white);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 16px;
+            text-align: center;
+        }
+
+        .container {
+            background: linear-gradient(180deg, var(--card-top) 0%, var(--card-dark) 100%);
+            border-radius: 22px;
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.8), 0 0 28px rgba(255, 85, 0, 0.1);
+            border: 1px solid var(--border-subtle);
+            max-width: 420px;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .banner-wrap {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border-bottom: 1px solid var(--border-subtle);
+            background: #111;
+        }
+
+        .banner-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .inner {
+            padding: 24px 20px 28px;
+        }
+
+        .bot-title {
+            font-size: 22px;
+            font-weight: 900;
+            letter-spacing: 0.8px;
+            color: var(--text-white);
+            margin-bottom: 8px;
+        }
+
+        .bot-title span {
+            color: var(--orange-light);
+        }
+
+        .badge {
+            background: rgba(255, 85, 0, 0.14);
+            color: var(--orange-light);
+            border: 1px solid rgba(255, 85, 0, 0.35);
+            padding: 4px 14px;
+            border-radius: 50px;
+            font-size: 12.5px;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 12px;
+        }
+
+        .status-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #22c55e;
+            box-shadow: 0 0 8px #22c55e;
+        }
+
+        h1 {
+            font-size: 19px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            color: var(--text-white);
+            line-height: 1.45;
+        }
+
+        p {
+            font-size: 13.5px;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+            line-height: 1.6;
+        }
+
+        .steps-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 14px;
+            padding: 12px 14px;
+            margin-bottom: 20px;
+            text-align: right;
+            font-size: 13px;
+            color: #e0e0e0;
+        }
+
+        .step-item {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            padding: 5px 0;
+        }
+
+        .step-num {
+            background: rgba(255, 85, 0, 0.2);
+            color: var(--orange-light);
+            font-weight: 800;
+            font-size: 12px;
+            width: 21px;
+            height: 21px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        @keyframes softGlow {
+            0%, 100% { box-shadow: 0 6px 20px rgba(255, 85, 0, 0.36); }
+            50% { box-shadow: 0 8px 28px rgba(255, 119, 51, 0.58); }
+        }
+
+        .btn {
+            display: block;
+            background: linear-gradient(135deg, var(--orange-main), var(--orange-deep));
+            color: var(--text-white);
+            text-decoration: none;
+            padding: 15px 20px;
+            border-radius: 14px;
+            font-size: 16px;
+            font-weight: 800;
+            animation: softGlow 2.4s infinite ease-in-out;
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+
+        .btn:hover {
+            background: linear-gradient(135deg, var(--orange-light), var(--orange-main));
+            transform: translateY(-2px);
+        }
+
+        .copy-helper {
+            margin-top: 12px;
+        }
+
+        .copy-btn {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            color: var(--text-muted);
+            padding: 6px 14px;
+            border-radius: 10px;
+            font-size: 12px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .copy-btn:hover {
+            border-color: var(--orange-light);
+            color: var(--text-white);
+        }
+
+        .footer-text {
+            margin-top: 18px;
+            font-size: 11.5px;
+            color: var(--text-dim);
+            line-height: 1.6;
+        }
+    </style>
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1865351904882352');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1865351904882352&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+</head>
+<body>
+
+    <div class="container">
+        <div class="banner-wrap">
+            <img src="16409.jpg" alt="ADMIRAL TEXAS4WIN" loading="eager">
+        </div>
+
+        <div class="inner">
+            <div class="bot-title">ADMIRAL <span>TEXAS BOT</span></div>
+
+            <div class="badge">
+                <span class="status-dot"></span>
+                <span>متصل الآن وجاهز</span>
+            </div>
+
+            <h1>انتقل إلى بوت أدميرال الرسمي</h1>
+            <p>اضغط على الزر أدناه للانتقال مباشرة إلى تليجرام وبدء الاستخدام بواجهة سريعة ومباشرة.</p>
+
+            <div class="steps-box">
+                <div class="step-item"><span class="step-num">1</span><span>اضغط على زر فتح البوت بالأسفل</span></div>
+                <div class="step-item"><span class="step-num">2</span><span>اضغط «ابدأ / Start» داخل تليجرام</span></div>
+                <div class="step-item"><span class="step-num">3</span><span>تابع خطواتك مباشرة داخل البوت</span></div>
+            </div>
+
+            <a id="botLink" href="https://t.me/ADMIRAL_TEXAS_4WIN_bot?start=8754849175" class="btn" onclick="if (typeof fbq === 'function') { fbq('track', 'CompleteRegistration'); }">
+                اضغط هنا لفتح البوت عبر تليجرام
+            </a>
+
+            <div class="copy-helper">
+                <button type="button" class="copy-btn" onclick="copyBotLink(this)">نسخ رابط البوت</button>
+            </div>
+
+            <div class="footer-text">
+                تحويل مباشر إلى تليجرام.<br>
+                جميع الحقوق محفوظة © ADMIRAL TEXAS BOT 2026
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function copyBotLink(btn) {
+            const url = document.getElementById('botLink').href;
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(url).then(() => {
+                    const oldText = btn.textContent;
+                    btn.textContent = 'تم نسخ الرابط ✓';
+                    setTimeout(() => btn.textContent = oldText, 2000);
+                });
+            }
+        }
+    </script>
+
+</body>
+</html>
